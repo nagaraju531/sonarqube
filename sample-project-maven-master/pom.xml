@@ -5,8 +5,24 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.web3j.sample</groupId>
-    <artifactId>sample-project-maven</artifactId>
+    <artifactId>sampleTesting</artifactId>
     <version>1.0.0-SNAPSHOT</version>
+    <packaging>war</packaging>
+         
+    <profiles>
+<profile>
+<id>sonar</id>
+<activation>
+<activeByDefault>true</activeByDefault>
+</activation>
+<properties>
+<!-- Optional URL to server. Default value is http://localhost:9000 -->
+<sonar.host.url>
+http://153.58.57.93:9000
+</sonar.host.url>
+</properties>
+</profile>
+</profiles>
 
     <properties>
         <web3j.version>3.6.0</web3j.version>
